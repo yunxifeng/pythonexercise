@@ -1,0 +1,42 @@
+# Python数据类型的内置结构--str
+- help(str)
+- str: 
+      - str参考资料: - [https://blog.csdn.net/fxnawm/article/details/79103803]
+                     - [http://www.runoob.com/python/python-strings.html]
+                     - [https://www.cnblogs.com/shenbuer/p/7833953.html] 
+                     - [https://www.cnblogs.com/printN/p/6924077.html]
+                     - [https://www.cnblogs.com/pscc/p/9569219.html]
+      - 基本操作:拼接,切片,乘法,可以当做list使用,但是注意区别
+      - 关于大小写:- str.capitalize()->字符[0]大写
+                   - str.title(),
+                   - str.upper(),
+                   - str.lower(),
+                   - str.swapcase()->大小写交换 
+      - 字符串长度:- len(str)
+      - 查找指定字符串:- str.find("*", m, n)->找不到则返回-1
+                      - str.index("*", m, n)->找不到则报错
+                      - 注:注意区别
+      - 按条件检测字符串: - str.startswith("*"),
+                         - str.endswith("*")
+                         - str.isalpha(): 检测字符串是否是字母组成(不可以有空格,且汉字在英文字符包裹中也被当做字母处理)
+                         - str.isalnum(): 检测字符串是否是由字母和数字组成(不可以有空格,且汉字在英文字符包裹中也被当做字母处理)
+                         - 检测字符串是否由数字组成
+                            - str.isdigit()
+                            - str.isdecimal()
+                            - str.isnumeric()
+                            - 注: [https://www.cnblogs.com/jebeljebel/p/4006433.html]
+                         - 注: 返回布尔值
+      - 切割字符串: - str.split() 用指定字符切割字符串 , 返回由字符串组成的列表
+                    - str.splitlines()  以换行切割字符串
+      - 拼接: - str.join(list) 将列表按照指定字符串连接 返回的是字符串    
+      - ljust(num, "*"):指定字符串的长度,内容靠左边,不足的位置用指定字符填充,默认空格, 返回字符串
+      - center(num, "*"):指定字符串长度,内容居中,不足的位置用指定字符填充,默认空格, 返回字符串
+      - rjust(num, "*"):指定字符串的长度,内容靠右边,不足的位置用指定字符填充,默认空格, 返回字符串
+      - 去除指定字符:
+        - strip("*") 去掉左右两边指定字符,默认是去掉空格
+        - lstrip("*")  去掉左侧指定字符,默认空格
+        - rstrip("*")  去掉右侧指定字符,默认空格
+      - zfill(num) 指定字符串长度,内容靠右,不足的位置用0填充
+      - table = str.maketrans("a", "b")  生成用于字符串替换的映射表
+        translate(table)  进行字符串替换
+        - 注: a和b必须长度一致
