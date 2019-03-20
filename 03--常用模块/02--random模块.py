@@ -1,6 +1,6 @@
 import random
 # 1.random.random()获取[0,1)之间的随机小数
-print(random.randint(1, 2))
+print(random.random())
 # 2.random.randint(m, n)获取[m, n]之间的随机整数
 print(random.randint(1, 2))
 # 3.random.randrange(m, n, [step])获取[m,n)之间的随机整数,可指定步长
